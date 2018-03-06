@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './views/Home';
+import { BrowserRouter } from 'react-router-dom';
+import Main from './Main';
 
-ReactDOM.render(
-	<Home/>,
-	document.getElementById('root')
+ReactDOM.render((
+		<BrowserRouter>
+			<Main/>
+		</BrowserRouter>
+	), document.getElementById('root')
 )

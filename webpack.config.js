@@ -8,6 +8,7 @@ module.exports = {
 	},
 	devServer: {
 		contentBase: "./public",
+    historyApiFallback: true,
 		port: 3000
 	},
 	module: {
