@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './Gallery.scss';
 
 class Gallery extends Component {
 	render(){
 		return (
-			<div>
+			<div className={"page gallery"}>
 				<h2>Gallery</h2>
 				<p>Lorem ipsum...</p>
 			</div>
