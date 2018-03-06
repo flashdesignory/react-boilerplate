@@ -7,6 +7,8 @@ import About from './routes/About';
 import Gallery from './routes/Gallery';
 import Video from './routes/Video';
 
+import './Main.scss';
+
 class Main extends Component {
 	render(){
 		return (
