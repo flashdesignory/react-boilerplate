@@ -1,7 +1,11 @@
 {
-  "name": "onepage",
+  "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "starter project",
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/flashdesignory/react-boilerplate.git"
+  },
   "main": "index.js",
   "scripts": {
     "build": "webpack",
