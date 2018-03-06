@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Switch, Route} from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './views/Home';
-import About from './views/About';
-import Gallery from './views/Gallery';
-import Video from './views/Video';
+import Header from './modules/Header';
+import Footer from './modules/Footer';
+import Home from './routes/Home';
+import About from './routes/About';
+import Gallery from './routes/Gallery';
+import Video from './routes/Video';
 
 class Main extends Component {
 	render(){
