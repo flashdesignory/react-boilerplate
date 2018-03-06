@@ -1,2 +1,2 @@
 # react-boilerplate
-Starter Project
+Starter Project - don't look at me yet..
