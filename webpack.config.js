@@ -1,18 +1,15 @@
 const path = require("path");
-var os = require('os');
 
-var interfaces = os.networkInterfaces();
-var addresses = [];
-for (var k in interfaces) {
-    for (var k2 in interfaces[k]) {
-        var address = interfaces[k][k2];
-        if (address.family === 'IPv4' && !address.internal) {
-            addresses.push(address.address);
-        }
-    }
+function getExternalIp(){
+	var address,
+	    ifaces = require('os').networkInterfaces();
+	for (var dev in ifaces) {
+	    ifaces[dev].filter((details) => details.family === 'IPv4' && details.internal === false ? address = details.address: undefined);
+	}
+	return address;
 }
 
-console.log(addresses);
+console.log(getExternalIp());
 
 module.exports = {
 	entry: ["./src/index.js"],
@@ -24,7 +21,7 @@ module.exports = {
 		contentBase: "./public",
     	historyApiFallback: true,
 		port: 8080,
-		host: addresses[0]
+		host: getExternalIp()
 	},
 	module: {
 		rules: [
