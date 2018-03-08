@@ -1,4 +1,5 @@
 const path = require("path");
+const chalk = require('chalk');
 
 function getExternalIp(){
 	var address,
@@ -9,7 +10,13 @@ function getExternalIp(){
 	return address;
 }
 
-console.log(getExternalIp());
+console.log();
+console.log(chalk.green("******************************"));
+console.log();
+console.log(chalk.cyan("External IP: " + getExternalIp()));
+console.log();
+console.log(chalk.green("******************************"));
+console.log();
 
 module.exports = {
 	entry: ["./src/index.js"],
