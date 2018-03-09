@@ -32,7 +32,7 @@ server.listen(port, host, function(err, result){
 	}
 
 	var url = 'http://' + host + ':' + port;
-	
+
 	console.log();
 	console.log(chalk.green("*******************************************"));
 	console.log();

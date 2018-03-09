@@ -1,4 +1,6 @@
 @import '../global';
 footer{
   color:$green;
+  background-color:#000000;
+  flex-shrink: 0;
 }
