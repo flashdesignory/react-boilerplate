@@ -1,4 +1,6 @@
 const path = require("path");
+const webpack = require("webpack");
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
 	entry: ["./src/index.js"],
@@ -24,10 +26,11 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				exclude: /node_modules/,
+				include: /node_modules/,
 				use: [
 					"style-loader",
-					"css-loader"
+					"css-loader",
+					'postcss-loader'
 				]
 			},
 			{
@@ -40,7 +43,16 @@ module.exports = {
 				]
 			}
 		]
-	},
+	}/*,
+	plugins: [
+		new webpack.LoaderOptionsPlugin({
+		  options: {
+		    postcss: [
+		      autoprefixer(),
+		    ]
+		   }
+		})
+	]*/,
 	resolve: {
 	    extensions: ['.js', '.jsx', '.json']
 	},
