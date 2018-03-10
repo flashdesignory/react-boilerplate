@@ -4,7 +4,7 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <footer>
-      <div className="vertical-center">
+      <div className="absolute-center">
         <div className="copyright">&copy; 2018</div>
       </div>
     </footer>
