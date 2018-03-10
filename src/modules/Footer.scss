@@ -1,6 +1,9 @@
 @import '../global';
 footer{
-  color:$green;
-  background-color:#000000;
+  width: 100%;
+  height: $footerHeight;
   flex-shrink: 0;
+  text-align: center;
+  color: $green;
+  background-color :#000000;
 }

@@ -1,8 +1,34 @@
 @import '../global';
 header{
-  background-color:#000000;
-
+  background-color: #000000;
   h1{
+    text-align: center;
     color: $red;
+  }
+}
+
+navigation{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    li{
+      flex-grow: 1;
+      a{
+        border-style:none;
+        outline:0;
+        text-decoration: none;
+        display: block;
+        color: #ffffff;
+        padding: $navigationPadding;
+        background-color: #333333;
+        &:hover, &.active{
+          color: $red;
+          background-color: #555555;
+        }
+      }
+    }
   }
 }

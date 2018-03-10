@@ -1,3 +1,17 @@
+$headerHeight: 100px;
+$footerHeight: 50px;
+
+$navigationPadding: 10px;
+$contentPadding: 10px;
+
 $red: #ff0000;
 $green: #00ff00;
 $light-gray: #cccccc;
+
+.vertical-center{
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

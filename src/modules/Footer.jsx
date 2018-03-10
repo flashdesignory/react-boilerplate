@@ -4,7 +4,9 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <footer>
-      <p>Made by me</p>
+      <div className="vertical-center">
+        <div className="copyright">&copy; 2018</div>
+      </div>
     </footer>
   )
 }
