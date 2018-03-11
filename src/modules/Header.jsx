@@ -6,15 +6,17 @@ import './Header.scss';
 const Header = () => {
   return (
     <header>
-      <h1>React Boilerplate!</h1>
-      <navigation>
-        <ul>
-          <li><NavLink exact={true} to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/gallery">Gallery</NavLink></li>
-          <li><NavLink to="/video">Video</NavLink></li>
-        </ul>
-      </navigation>
+      <div className="header-center">
+        <div className="title"><h1>React Boilerplate!</h1></div>
+        <nav>
+          <ul>
+            <li><NavLink exact={true} to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/gallery">Gallery</NavLink></li>
+            <li><NavLink to="/video">Video</NavLink></li>
+          </ul>
+        </nav>
+    </div>
     </header>
   )
 }

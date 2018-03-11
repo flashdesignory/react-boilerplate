@@ -1,33 +1,62 @@
 @import '../global';
 header{
   background-color: #000000;
-  h1{
-    text-align: center;
-    color: $red;
+  padding: $contentPadding;
+  .header-center{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .title{
+      margin-right: auto;
+      h1{
+        text-align: center;
+        color: $red;
+      }
+    }
+
+    nav{
+      display: flex !important;
+      width:50%;
+      ul{
+        margin: 0;
+        padding: 0;
+        width:100%;
+        list-style: none;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        li{
+          flex-grow: 1;
+          a{
+            transition: all .5s ease;
+            border-style:none;
+            outline:0;
+            text-decoration: none;
+            display: block;
+            color: #ffffff;
+            padding: $navigationPadding;
+            background-color: #333333;
+            &:hover, &.active{
+              color: $red;
+              background-color: #555555;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-navigation{
-  ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    text-align: center;
-    li{
-      flex-grow: 1;
-      a{
-        border-style:none;
-        outline:0;
-        text-decoration: none;
-        display: block;
-        color: #ffffff;
-        padding: $navigationPadding;
-        background-color: #333333;
-        &:hover, &.active{
-          color: $red;
-          background-color: #555555;
-        }
+@media screen and (max-width: 768px) {
+  header{
+    .header-center{
+      flex-direction: column;
+      .title{
+        margin:auto;
+      }
+      nav{
+        width:100%;
       }
     }
   }
