@@ -1,5 +1,10 @@
+@import '../global';
 .video{
+  background: url('/files/images/background_home.jpg');
   h2{
     color:#ffff00;
+  }
+  p{
+    color: #ffffff;
   }
 }

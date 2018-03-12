@@ -14,7 +14,18 @@
 }
 
 main{
+  display:flex !important;
   flex: 1 0 auto;
   background-color: #ffffff;
-  padding: $contentPadding;
+}
+
+.page{
+  flex-grow: 1;
+  background-size: cover;
+  background-position: center center;
+  .page-inner{
+    width:100%;
+    height:100%;
+    padding: $contentPadding;
+  }
 }

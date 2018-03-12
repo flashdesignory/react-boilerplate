@@ -1,5 +1,10 @@
+@import '../global';
 .about{
+  background: url('/files/images/background_story.jpg');
   h2{
     color:#ff00ff;
+  }
+  p{
+    color: #ffffff;
   }
 }

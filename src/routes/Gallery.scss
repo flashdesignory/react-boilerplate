@@ -1,5 +1,10 @@
+@import '../global';
 .gallery{
+  background: url('/files/images/background_photos.jpg');
   h2{
     color:#0000ff;
+  }
+  p{
+    color: #ffffff;
   }
 }

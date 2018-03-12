@@ -1,5 +1,10 @@
+@import '../global';
 .home{
+  background: url('/files/images/background_home.jpg');
   h2{
-    color:#00ffff;
+    color: #00ffff;
+  }
+  p{
+    color: #ffffff;
   }
 }
