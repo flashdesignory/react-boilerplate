@@ -1,6 +1,6 @@
 @import '../global';
 header{
-  background-color: #000000;
+  background-color: $lavender;
   padding: $contentPadding;
   .header-center{
     display: flex;
@@ -10,8 +10,7 @@ header{
     .title{
       margin-right: auto;
       h1{
-        text-align: center;
-        color: $red;
+        color: $snow;
       }
     }
 
@@ -34,12 +33,12 @@ header{
             outline:0;
             text-decoration: none;
             display: block;
-            color: #ffffff;
+            color: $snow;
             padding: $navigationPadding;
-            background-color: #333333;
+            background-color: $overcast;
             &:hover, &.active{
-              color: $red;
-              background-color: #555555;
+              color: $snow;
+              background-color: $dusty;
             }
           }
         }
