@@ -21,6 +21,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
+    "react-transition-group": "^2.2.1",
     "sanitize.css": "^5.0.0",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10",

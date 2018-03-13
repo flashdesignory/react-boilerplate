@@ -27,6 +27,7 @@ class Main extends Component {
 	}
 
 	render(){
+		console.log(location)
 		return (
 			<div className="container">
 				<Header />
