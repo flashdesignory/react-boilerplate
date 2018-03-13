@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import './Header.scss';
 
@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <div className="header-center">
-        <div className="title"><h1>React Boilerplate!</h1></div>
+        <div className="title"><Link to="/"><h1>React Boilerplate!</h1></Link></div>
         <nav>
           <ul>
             <li><NavLink exact={true} to="/">Home</NavLink></li>

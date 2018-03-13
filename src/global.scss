@@ -8,6 +8,18 @@ $red: #ff0000;
 $green: #00ff00;
 $light-gray: #cccccc;
 
+a{
+	border-style:none;
+	outline:0;
+	text-decoration: none;
+	&:active{
+		outline:none;
+	}
+	&:focus{
+		outline:none;
+	}
+}
+
 .vertical-center{
   width:100%;
   height:100%;
