@@ -1,38 +1,32 @@
 @import '/global';
 @import '/transitions';
-#root,
+#root{
+  width:100%;
+  height:100%;
+}
+
 .container{
   width:100%;
   height:100%;
-}
-
-.transition-container{
-  width:100%;
-  height:100%;
-}
-
-.page{
-  width:100%;
-  min-height:100%;
   display:flex;
   flex-direction: column;
-  position: absolute;
-  left:0px;
-  top:0px;
-  background-size: cover;
-  background-position: center center;
 }
 
 main{
   display:flex !important;
   flex: 1 0 auto;
+  .transition-container{
+    display:flex;
+    flex-grow: 1;
+    position: relative;
+  }
 }
 
-.content{
+.page{
   flex-grow: 1;
   background-size: cover;
   background-position: center center;
-  .content-inner{
+  .page-inner{
     width:100%;
     height:100%;
     padding: $contentPadding;

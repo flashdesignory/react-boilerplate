@@ -3,11 +3,6 @@ $transitionEasing: ease-in-out;
 .page-transition-enter {
   transition: opacity $transitionTime $transitionEasing;
   opacity: 0;
-  position: absolute;
-  left:0px;
-  top:0px;
-  right:0px;
-  bottom:0px;
 }
 .page-transition-enter.page-transition-enter-active {
   opacity: 1;
@@ -15,11 +10,6 @@ $transitionEasing: ease-in-out;
 .page-transition-exit {
   transition: opacity $transitionTime $transitionEasing;
   opacity: 1;
-  position: absolute;
-  left:0px;
-  top:0px;
-  right:0px;
-  bottom:0px;
 }
 .page-transition-exit.page-transition-exit-active {
   opacity: 0;

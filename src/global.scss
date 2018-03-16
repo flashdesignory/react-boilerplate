@@ -7,11 +7,13 @@ $navigationPadding: 10px;
 $contentPadding: 10px;
 
 /* colors */
-$dusty: #96858F;
-$lavender: #6D7993;
-$overcast: #9099A2;
-$paper: #D5D5D5;
-$snow: #FFFFFF;
+$dusty: rgb(150,133,143);
+$lavender: rgb(109,121,147);
+$lavender-light: rgba(109,121,147,0.5);
+$overcast: rgb(144,153,162);
+$overcast-light: rgba(144,153,162,0.5);
+$paper: rgb(213,213,213);
+$snow: rgb(255,255,255);
 
 /* tags */
 a{

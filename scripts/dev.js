@@ -1,9 +1,12 @@
+process.env.BABEL_ENV = 'development';
+process.env.NODE_ENV = 'development';
+
 const path = require('path');
 const chalk = require('chalk');
 const open = require('open');
 const webpack = require('webpack');
 const webpackDevServer = require('webpack-dev-server');
-const config = require("../webpack.config.js");
+const config = require("../config/webpack.config.dev.js");
 const compiler = webpack(config);
 
 function getExternalIp(){
