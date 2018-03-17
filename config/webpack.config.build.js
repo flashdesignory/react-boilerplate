@@ -32,11 +32,17 @@ module.exports = {
           "css-loader",
 					"sass-loader"
         ]
-      }
+      },
+			{
+			  test: /\.(png|jpg)$/,
+			  use: [
+					'url-loader'
+				]
+			}
 		]
 	},
 	resolve: {
-	    extensions: ['.js', '.jsx', '.json']
+	    extensions: ['.js', '.jsx', '.json', '.jpg', '.png']
 	},
 	mode: 'production'
 }
