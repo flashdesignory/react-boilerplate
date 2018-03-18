@@ -35,7 +35,6 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.10",
     "file-loader": "^1.1.11",
-    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.2.0",
     "node-sass": "^4.7.2",
     "open": "0.0.5",

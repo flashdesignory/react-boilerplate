@@ -7,8 +7,9 @@
     "message": "Please rotate your screen."
   },
   "header": {
+    "title": "React Boilerplate",
     "releaseDate": "ONLY AT CINEMAS",
-    "url": "https://www.journeytothedarktower.com/"
+    "url": "http://www.google.com"
   },
   "social": {
     "trailerEnabled": false,
@@ -36,14 +37,14 @@
     ]
   },
   "footer": {
-    "legal": "&copy;2017. All rights reserved.",
+    "legal": "&copy;2018. All rights reserved.",
     "credits": "Credits"
   },
   "trailer": {
-    "id": "5dsGWM5XGdg"
+    "id": ""
   },
   "audio": {
-    "src" : "files/audio/Overture.mp3"
+    "src" : ""
   },
   "credits": {
     "links": [
