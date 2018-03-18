@@ -28,17 +28,25 @@ module.exports = {
 			{
         test: /\.(css|scss)$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-					"sass-loader"
+					MiniCssExtractPlugin.loader,
+           {
+						 loader: 'css-loader',
+						 options: {url:false}
+					 },
+           {
+             loader: 'postcss-loader',
+             options: { config: { path: path.resolve(__dirname, "../public/") } },
+           }, 'sass-loader'
         ]
       },
 			{
-			  test: /\.(png|jpg)$/,
-			  use: [
-					'url-loader'
-				]
-			}
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+          }
+        ]
+      }
 		]
 	},
 	resolve: {

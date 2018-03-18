@@ -48,9 +48,18 @@ module.exports = {
 				use: [
 					"style-loader",
 					"css-loader",
-					"sass-loader"
+					"resolve-url-loader",
+					"sass-loader?sourceMap"
 				]
-			}
+			},
+			{
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+          }
+        ]
+      }
 		]
 	},
 	plugins: [
