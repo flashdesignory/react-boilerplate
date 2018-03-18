@@ -28,7 +28,7 @@ a {
   align-items: center; }
 
 .home {
-  background: url("/files/images/background_home.jpg"); }
+  background: url("files/images/background_home.jpg"); }
 
 /* width / height */
 /* padding / margin */
@@ -178,7 +178,7 @@ a {
   align-items: center; }
 
 .about {
-  background: url("/files/images/background_story.jpg"); }
+  background: url("files/images/background_story.jpg"); }
 
 /* width / height */
 /* padding / margin */
@@ -210,7 +210,7 @@ a {
   align-items: center; }
 
 .gallery {
-  background: url("/files/images/background_photos.jpg"); }
+  background: url("files/images/background_photos.jpg"); }
 
 /* width / height */
 /* padding / margin */
@@ -242,7 +242,7 @@ a {
   align-items: center; }
 
 .video {
-  background: url("/files/images/background_home.jpg"); }
+  background: url("files/images/background_home.jpg"); }
 
 /* width / height */
 /* padding / margin */
@@ -462,7 +462,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -801,7 +802,6 @@ select,
 summary,
 textarea,
 [tabindex] {
-  -ms-touch-action: manipulation;
   /* 1 */
   touch-action: manipulation; }
 
