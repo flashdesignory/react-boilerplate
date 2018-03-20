@@ -3,12 +3,19 @@ const webpack = require("webpack");
 const autoprefixer = require('autoprefixer');
 
 function getExternalIp(){
-	var address,
-	    ifaces = require('os').networkInterfaces();
-	for (var dev in ifaces) {
-	    ifaces[dev].filter((details) => details.family === 'IPv4' && details.internal === false ? address = details.address: undefined);
+	let address;
+	let ifaces = require('os').networkInterfaces();
+	let addresses = [];
+	for (let dev in ifaces) {
+	   // ifaces[dev].filter((details) => details.family === 'IPv4' && details.internal === false ? address = details.address: undefined);
+		 ifaces[dev].filter(function(details){
+			 if(details.family === 'IPv4' && details.internal === false && details.address != undefined){
+				 addresses.push(details.address);
+			 }
+		 })
 	}
-	return address;
+	console.log("found the following external ip: " + addresses);
+	return addresses[0];
 }
 
 const host = getExternalIp();
