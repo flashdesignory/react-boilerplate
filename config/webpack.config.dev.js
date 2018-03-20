@@ -1,4 +1,5 @@
 const path = require("path");
+const chalk = require('chalk');
 const webpack = require("webpack");
 const autoprefixer = require('autoprefixer');
 
@@ -14,7 +15,17 @@ function getExternalIp(){
 			 }
 		 })
 	}
-	console.log("found the following external ip: " + addresses);
+
+	console.log();
+	console.log(chalk.green("*******************************************"));
+	console.log();
+	for(let i = 0; i<addresses.length; i++){
+		console.log(chalk.cyan("found the following external ip: " + addresses[i]));
+	}
+	console.log();
+	console.log(chalk.green("*******************************************"));
+	console.log();
+
 	return addresses[0];
 }
 
