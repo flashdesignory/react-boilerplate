@@ -3,6 +3,8 @@ const chalk = require('chalk');
 const webpack = require("webpack");
 const autoprefixer = require('autoprefixer');
 
+const publicPath = "../public/"
+
 function getExternalIp(){
 	let address;
 	let ifaces = require('os').networkInterfaces();
@@ -39,7 +41,7 @@ module.exports = {
 		"./src/index.js"
 	],
 	output: {
-		path: path.resolve(__dirname, "../public"),
+		path: path.resolve(__dirname, publicPath),
 		filename: "bundle.js"
 	},
 	module: {

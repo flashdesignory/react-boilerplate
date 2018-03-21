@@ -3,12 +3,14 @@ const webpack = require("webpack");
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const publicPath = "../dist/"
+
 module.exports = {
 	entry: [
 		"./src/index.js"
 	],
 	output: {
-		path: path.resolve(__dirname, "../public/"),
+		path: path.resolve(__dirname, publicPath),
 		filename: "bundle.js"
 	},
 	plugins: [
@@ -35,7 +37,7 @@ module.exports = {
 					 },
            {
              loader: 'postcss-loader',
-             options: { config: { path: path.resolve(__dirname, "../public/") } },
+             options: { config: { path: path.resolve(__dirname, publicPath) } },
            }, 'sass-loader'
         ]
       },
