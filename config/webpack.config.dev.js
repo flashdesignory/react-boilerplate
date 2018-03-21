@@ -2,7 +2,6 @@ const path = require("path");
 const chalk = require('chalk');
 const webpack = require("webpack");
 const autoprefixer = require('autoprefixer');
-
 const publicPath = "../public/"
 
 function getExternalIp(){

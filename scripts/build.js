@@ -7,7 +7,6 @@ const chalk = require('chalk');
 const webpack = require('webpack');
 const config = require("../config/webpack.config.build.js");
 const compiler = webpack(config);
-
 const distPath = "./dist/";
 const publicPath = "./public/";
 
