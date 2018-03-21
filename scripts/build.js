@@ -7,6 +7,14 @@ const webpack = require('webpack');
 const config = require("../config/webpack.config.build.js");
 const compiler = webpack(config);
 
+console.log();
+console.log(chalk.green("*******************************************"));
+console.log();
+console.log(chalk.cyan("building your app.."));
+console.log();
+console.log(chalk.green("*******************************************"));
+console.log();
+
 compiler.run((err, stats) => {
   if(err){
     return reject(err);
