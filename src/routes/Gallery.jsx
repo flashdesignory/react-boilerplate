@@ -8,7 +8,7 @@ class Gallery extends Component {
 	render(){
 		return (
 			<div className="page gallery">
-				<Header/>
+				<Header {...this.props.header}/>
 				<main>
 					<section className={"content"}>
 						<div className="content-inner">
@@ -17,7 +17,7 @@ class Gallery extends Component {
 						</div>
 					</section>
 				</main>
-				<Footer />
+				<Footer {...this.props.footer}/>
 			</div>
 		)
 	}

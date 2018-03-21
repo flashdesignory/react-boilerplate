@@ -20,15 +20,21 @@ class Main extends Component {
   }
   componentDidMount(e){
     console.log("componentDidMount()");
+    let startTime = new Date();
     axios.get('files/data/data.json')
       .then(response => {
         console.log(response.data);
+        let duration = new Date() - startTime;
+        let min = 3000;
+        let delay;
+        min > duration ? delay = (min-duration) : delay = 0;
+        //console.log("delay: " + delay);
         setTimeout(() => {
           this.setState({
             loading: false,
             data: response.data
           })
-        }, 3000);
+        }, delay);
       })
       .catch(error => {
         console.log(error);
@@ -41,10 +47,10 @@ class Main extends Component {
   	      <TransitionGroup className="transition-container">
   	        <CSSTransition key={location.key} timeout={1000} classNames="page-transition">
   	            <Switch location={location}>
-  								<Route exact path="/" render={() => this.state.loading ? <Preloader /> : <Home />}/>
-  								<Route path="/about" render={() => this.state.loading ? <Preloader /> : <About />}/>
-  								<Route path="/gallery" render={() => this.state.loading ? <Preloader /> : <Gallery />}/>
-  								<Route path="/video" render={() => this.state.loading ? <Preloader /> : <Video />}/>
+  								<Route exact path="/" render={() => this.state.loading ? <Preloader /> : <Home {...this.state.data} />}/>
+  								<Route path="/about" render={() => this.state.loading ? <Preloader /> : <About {...this.state.data} />}/>
+  								<Route path="/gallery" render={() => this.state.loading ? <Preloader /> : <Gallery {...this.state.data} />}/>
+  								<Route path="/video" render={() => this.state.loading ? <Preloader /> : <Video {...this.state.data} />}/>
   	            </Switch>
   	        </CSSTransition>
   	      </TransitionGroup>

@@ -8,7 +8,7 @@ class Video extends Component {
 	render(){
 		return (
 			<div className="page video">
-				<Header/>
+				<Header {...this.props.header}/>
 				<main>
 					<section className={"content"}>
 						<div className="content-inner">
@@ -17,7 +17,7 @@ class Video extends Component {
 						</div>
 					</section>
 				</main>
-				<Footer />
+				<Footer {...this.props.footer}/>
 			</div>
 		)
 	}

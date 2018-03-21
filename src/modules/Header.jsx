@@ -3,11 +3,11 @@ import { NavLink, Link } from 'react-router-dom';
 
 import './Header.scss';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
       <div className="header-center">
-        <div className="title"><Link to="/"><h1>React Boilerplate!</h1></Link></div>
+        <div className="title"><Link to="/"><h1>{props.title}</h1></Link></div>
         <nav>
           <ul>
             <li><NavLink exact={true} to="/">Home</NavLink></li>
