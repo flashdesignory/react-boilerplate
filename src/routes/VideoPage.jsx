@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import './Gallery.scss';
+import './VideoPage.scss';
 
 import Header from '../modules/header/Header';
 import Footer from '../modules/footer/Footer';
 
-class Gallery extends Component {
+class VideoPage extends Component {
 	render(){
 		return (
-			<div className="page gallery">
+			<div className="page video">
 				<Header {...this.props.header}/>
 				<main>
 					<section className={"content"}>
 						<div className="content-inner">
-							<h2>Gallery</h2>
+							<h2>Video</h2>
 							<p>Lorem ipsum...</p>
 						</div>
 					</section>
@@ -23,4 +23,4 @@ class Gallery extends Component {
 	}
 }
 
-export default Gallery;
+export default VideoPage;

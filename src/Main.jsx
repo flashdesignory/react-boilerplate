@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import axios from 'axios';
-import Home from './routes/Home';
-import About from './routes/About';
-import Gallery from './routes/Gallery';
-import Video from './routes/Video';
+import HomePage from './routes/HomePage';
+import AboutPage from './routes/AboutPage';
+import GalleryPage from './routes/GalleryPage';
+import VideoPage from './routes/VideoPage';
 import Preloader from './modules/preloader/Preloader';
 
 import './Main.scss';
@@ -47,10 +47,10 @@ class Main extends Component {
   	      <TransitionGroup className="transition-container">
   	        <CSSTransition key={location.key} timeout={1000} classNames="page-transition">
   	            <Switch location={location}>
-  								<Route exact path="/" render={() => this.state.loading ? <Preloader /> : <Home {...this.state.data} />}/>
-  								<Route path="/about" render={() => this.state.loading ? <Preloader /> : <About {...this.state.data} />}/>
-  								<Route path="/gallery" render={() => this.state.loading ? <Preloader /> : <Gallery {...this.state.data} />}/>
-  								<Route path="/video" render={() => this.state.loading ? <Preloader /> : <Video {...this.state.data} />}/>
+  								<Route exact path="/" render={() => this.state.loading ? <Preloader /> : <HomePage {...this.state.data} />}/>
+  								<Route path="/about" render={() => this.state.loading ? <Preloader /> : <AboutPage {...this.state.data} />}/>
+  								<Route path="/gallery" render={() => this.state.loading ? <Preloader /> : <GalleryPage {...this.state.data} />}/>
+  								<Route path="/video" render={() => this.state.loading ? <Preloader /> : <VideoPage {...this.state.data} />}/>
   	            </Switch>
   	        </CSSTransition>
   	      </TransitionGroup>

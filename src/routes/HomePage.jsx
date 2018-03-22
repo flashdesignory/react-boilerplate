@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Home.scss';
+import './HomePage.scss';
 import Header from '../modules/header/Header';
 import Footer from '../modules/footer/Footer';
 
-class Home extends Component {
+class HomePage extends Component {
 	render(){
 		return (
 			<div className="page home">
@@ -24,4 +24,4 @@ class Home extends Component {
 	}
 }
 
-export default Home;
+export default HomePage;

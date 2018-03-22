@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './About.scss';
+import './AboutPage.scss';
 
 import Header from '../modules/header/Header';
 import Footer from '../modules/footer/Footer';
 
-class About extends Component{
+class AboutPage extends Component{
   render(){
     return (
       <div className="page about">
@@ -23,4 +23,4 @@ class About extends Component{
   }
 }
 
-export default About;
+export default AboutPage;
