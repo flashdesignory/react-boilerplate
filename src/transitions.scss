@@ -1,16 +1,56 @@
-$transitionTime: 1s;
-$transitionEasing: ease-in-out;
+/********************** page-transitions ****************************/
+$transitionPageTime: 1s;
+$transitionPageEasing: ease-in-out;
 .page-transition-enter {
-  transition: opacity $transitionTime $transitionEasing;
+  transition: opacity $transitionPageTime $transitionPageEasing;
   opacity: 0;
 }
 .page-transition-enter.page-transition-enter-active {
   opacity: 1;
 }
 .page-transition-exit {
-  transition: opacity $transitionTime $transitionEasing;
+  transition: opacity $transitionPageTime $transitionPageEasing;
   opacity: 1;
 }
 .page-transition-exit.page-transition-exit-active {
   opacity: 0;
+}
+
+/********************** gallery-transitions ****************************/
+.pt-page-moveToLeft { animation: moveToLeft .6s ease both; }
+.pt-page-moveFromLeft { animation: moveFromLeft .6s ease both; }
+.pt-page-moveToRight { animation: moveToRight .6s ease both; }
+.pt-page-moveFromRight { animation: moveFromRight .6s ease both; }
+.pt-page-moveToTop { animation: moveToTop .6s ease both; }
+.pt-page-moveFromTop { animation: moveFromTop .6s ease both; }
+.pt-page-moveToBottom { animation: moveToBottom .6s ease both; }
+.pt-page-moveFromBottom { animation: moveFromBottom .6s ease both; }
+
+@keyframes moveToLeft {
+	from { }
+	to { transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+	from { transform: translateX(-100%); }
+}
+@keyframes moveToRight {
+	from { }
+	to { transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { transform: translateX(100%); }
+}
+@keyframes moveToTop {
+	from { }
+	to { transform: translateY(-100%); }
+}
+@keyframes moveFromTop {
+	from { transform: translateY(-100%); }
+}
+@keyframes moveToBottom {
+	from { }
+	to { transform: translateY(100%); }
+}
+@keyframes moveFromBottom {
+	from { transform: translateY(100%); }
 }
