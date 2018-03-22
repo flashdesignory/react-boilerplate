@@ -6,7 +6,7 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Gallery from './routes/Gallery';
 import Video from './routes/Video';
-import Preloader from './modules/Preloader';
+import Preloader from './modules/preloader/Preloader';
 
 import './Main.scss';
 

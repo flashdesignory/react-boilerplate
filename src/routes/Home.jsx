@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.scss';
-import Header from '../modules/Header';
-import Footer from '../modules/Footer';
+import Header from '../modules/header/Header';
+import Footer from '../modules/footer/Footer';
 
 class Home extends Component {
 	render(){

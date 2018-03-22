@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Video.scss';
 
-import Header from '../modules/Header';
-import Footer from '../modules/Footer';
+import Header from '../modules/header/Header';
+import Footer from '../modules/footer/Footer';
 
 class Video extends Component {
 	render(){
