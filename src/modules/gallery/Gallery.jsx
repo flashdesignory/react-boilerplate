@@ -19,6 +19,8 @@ class Gallery extends Component {
             (image) => <GalleryImage key={image.id} {...image}/>
           )}
         </div>
+        <a ref="gallery-prev" className="gallery-button left" onClick={this.handleOnClick}></a>
+        <a ref="gallery-next" className="gallery-button right" onClick={this.handleOnClick}></a>
       </div>
     )
   }
