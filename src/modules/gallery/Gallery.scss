@@ -1,4 +1,4 @@
-//@import '../../fonts';
+@import '../../fonts';
 .gallery-inner{
   position: relative;
   width: 100%;
@@ -12,9 +12,16 @@
 .gallery-button{
   width:40px;
   height:40px;
-  background-color:orange;
   cursor:pointer;
   position: absolute;
+  display:flex;
+  justify-content: center;
+  div{
+    color:#ffffff;
+    font-size: 2em;
+    display: block;
+    align-self: center;
+  }
   &.left{
     align-self: flex-start;
   }
