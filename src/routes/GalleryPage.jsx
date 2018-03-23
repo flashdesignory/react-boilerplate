@@ -3,6 +3,7 @@ import './GalleryPage.scss';
 
 import Header from '../modules/header/Header';
 import Footer from '../modules/footer/Footer';
+import Gallery from '../modules/gallery/Gallery';
 
 class GalleryPage extends Component {
 	render(){
@@ -12,8 +13,7 @@ class GalleryPage extends Component {
 				<main>
 					<section className={"content"}>
 						<div className="content-inner">
-							<h2>Gallery</h2>
-							<p>Lorem ipsum...</p>
+							<Gallery {...this.props.gallery}/>
 						</div>
 					</section>
 				</main>
