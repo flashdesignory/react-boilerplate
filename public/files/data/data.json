@@ -51,8 +51,7 @@
                {"id": "002", "url": "files/images/photos_02.jpg"},
                {"id": "003", "url": "files/images/photos_03.jpg"},
                {"id": "004", "url": "files/images/photos_04.jpg"},
-               {"id": "005", "url": "files/images/photos_05.jpg"},
-               {"id": "006", "url": "files/images/photos_06.jpg"}]
+               {"id": "005", "url": "files/images/photos_05.jpg"}]
   },
   "credits": {
     "links": [

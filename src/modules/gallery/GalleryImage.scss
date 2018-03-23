@@ -1,0 +1,24 @@
+.image-container{
+  position: absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  .image-preloader{
+    position: absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    margin:auto;
+  }
+  .image-element{
+    position: absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    background-position: center center;
+    background-size: cover;
+  }
+}
