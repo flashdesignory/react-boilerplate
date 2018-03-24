@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Swipeable from '../utils/Swipeable';
 import './GalleryImage.scss';
 
 class GalleryImage extends Component {
@@ -12,10 +13,12 @@ class GalleryImage extends Component {
   render(){
     let {url, imageClass} = this.props;
     return (
-      <div className={"image-container" + imageClass} onAnimationEnd={this.handleAnimationEnd}>
-        <div className="image-preloader"></div>
-        <div className="image-element" style={{ backgroundImage: `url(${url})` }}></div>
-      </div>
+      <Swipeable>
+        <div className={"image-container" + imageClass} onAnimationEnd={this.handleAnimationEnd}>
+          <div className="image-preloader"></div>
+          <div className="image-element" style={{ backgroundImage: `url(${url})` }}></div>
+        </div>
+      </Swipeable>
     )
   }
 }

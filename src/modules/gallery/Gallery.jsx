@@ -80,7 +80,8 @@ class Gallery extends Component {
     }else{
       imageClass = "";
     }
-    return <GalleryImage key={image.id} {...image} imageClass={imageClass} handleAnimationEnd={this.handleAnimationEnd}/>
+
+   return <GalleryImage key={image.id} {...image} imageClass={imageClass} handleAnimationEnd={this.handleAnimationEnd}/>
   }
   render(){
     return (
