@@ -13,7 +13,7 @@ class GalleryPage extends Component {
 				<main>
 					<section className={"content"}>
 						<div className="content-inner">
-							<Gallery {...this.props.gallery}/>
+							<Gallery loop={false} {...this.props.gallery}/>
 						</div>
 					</section>
 				</main>

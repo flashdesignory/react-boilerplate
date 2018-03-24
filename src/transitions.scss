@@ -17,14 +17,14 @@ $transitionPageEasing: ease-in-out;
 }
 
 /********************** gallery-transitions ****************************/
-.pt-page-moveToLeft { animation: moveToLeft .6s ease both; }
-.pt-page-moveFromLeft { animation: moveFromLeft .6s ease both; }
-.pt-page-moveToRight { animation: moveToRight .6s ease both; }
-.pt-page-moveFromRight { animation: moveFromRight .6s ease both; }
-.pt-page-moveToTop { animation: moveToTop .6s ease both; }
-.pt-page-moveFromTop { animation: moveFromTop .6s ease both; }
-.pt-page-moveToBottom { animation: moveToBottom .6s ease both; }
-.pt-page-moveFromBottom { animation: moveFromBottom .6s ease both; }
+.moveToLeft { animation: moveToLeft .6s ease both; }
+.moveFromLeft { animation: moveFromLeft .6s ease both; }
+.moveToRight { animation: moveToRight .6s ease both; }
+.moveFromRight { animation: moveFromRight .6s ease both; }
+.moveToTop { animation: moveToTop .6s ease both; }
+.moveFromTop { animation: moveFromTop .6s ease both; }
+.moveToBottom { animation: moveToBottom .6s ease both; }
+.moveFromBottom { animation: moveFromBottom .6s ease both; }
 
 @keyframes moveToLeft {
 	from { }
