@@ -50,7 +50,7 @@ class Gallery extends Component {
   }
   move(index){
     let { isTransitioning, currentIndex, prevIndex } = this.state;
-    console.log("move(" + index + ", " + currentIndex + ", " + prevIndex + "," + isTransitioning + ")");
+    //console.log("move(" + index + ", " + currentIndex + ", " + prevIndex + "," + isTransitioning + ")");
 
     if(isTransitioning) return;
     isTransitioning = true;
@@ -63,22 +63,31 @@ class Gallery extends Component {
       prevIndex
     })
   }
+  handleAnimationEnd(event){
+  //  console.log("handleAnimationEnd()");
+  }
+  renderImage(image, index){
+    let imageClass;
+    let { currentIndex, prevIndex } = this.state;
+    if(currentIndex === index){
+      if(prevIndex === -1){
+        imageClass = " active moveFromRight";
+      }else{
+        prevIndex > currentIndex ? imageClass = " active moveFromLeft" : imageClass = " active moveFromRight";
+      }
+    }else if(prevIndex === index){
+      currentIndex > prevIndex ? imageClass = " active moveToLeft" : imageClass = " active moveToRight";
+    }else{
+      imageClass = "";
+    }
+    return <GalleryImage key={image.id} {...image} imageClass={imageClass} handleAnimationEnd={this.handleAnimationEnd}/>
+  }
   render(){
     return (
       <div className="gallery-inner">
         <div className="gallery-images">
           {this.data.map(
-            (image, index) => {
-              let imageClass;
-              if(this.state.currentIndex === index){
-                imageClass = " active";
-              }else if(this.state.prevIndex === index){
-                imageClass = ""
-              }else{
-                imageClass = "";
-              }
-              return <GalleryImage key={image.id} {...image} imageClass={imageClass}/>
-            }
+            (image, index) => this.renderImage(image, index)
           )}
         </div>
         <a ref="gallery-prev" className="gallery-button left" onClick={this.prev}><div className="icon-circle-left"></div></a>
