@@ -13,7 +13,7 @@ class GalleryImage extends Component {
   render(){
     let {url, imageClass} = this.props;
     return (
-      <Swipeable>
+      <Swipeable handleLeftSwipe={this.props.handleLeftSwipe} handleRightSwipe={this.props.handleRightSwipe}>
         <div className={"image-container" + imageClass} onAnimationEnd={this.handleAnimationEnd}>
           <div className="image-preloader"></div>
           <div className="image-element" style={{ backgroundImage: `url(${url})` }}></div>

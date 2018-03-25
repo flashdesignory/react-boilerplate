@@ -17,6 +17,7 @@ class Gallery extends Component {
     this.move = this.move.bind(this);
   }
   prev(event){
+    console.log("prev()");
     let nextIndex = this.state.currentIndex - 1;
 
     if(this.loop){
@@ -33,6 +34,7 @@ class Gallery extends Component {
     if(event) event.preventDefault();
   }
   next(event){
+    console.log("next()");
     let nextIndex = this.state.currentIndex + 1;
 
     if(this.loop){
@@ -81,7 +83,12 @@ class Gallery extends Component {
       imageClass = "";
     }
 
-   return <GalleryImage key={image.id} {...image} imageClass={imageClass} handleAnimationEnd={this.handleAnimationEnd}/>
+   return <GalleryImage key={image.id} {...image}
+            imageClass={imageClass}
+            handleAnimationEnd={this.handleAnimationEnd}
+            handleLeftSwipe={this.next}
+            handleRightSwipe={this.prev}
+          />
   }
   render(){
     return (
