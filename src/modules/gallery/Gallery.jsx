@@ -91,6 +91,8 @@ class Gallery extends Component {
           />
   }
   render(){
+    let prevButtonClasses = this.state.currentIndex === 0 ? "gallery-button left inactive" : "gallery-button left";
+    let nextButtonClasses = this.state.currentIndex === this.data.length-1 ? "gallery-button right inactive" : "gallery-button right";
     return (
       <div className="gallery-inner">
         <div className="gallery-images">
@@ -98,8 +100,8 @@ class Gallery extends Component {
             (image, index) => this.renderImage(image, index)
           )}
         </div>
-        <a ref="gallery-prev" className="gallery-button left" onClick={this.prev}><div className="icon-circle-left"></div></a>
-        <a ref="gallery-next" className="gallery-button right" onClick={this.next}><div className="icon-circle-right"></div></a>
+        <a ref="gallery-prev" className={prevButtonClasses} onClick={this.prev}><div className="icon-circle-left"></div></a>
+        <a ref="gallery-next" className={nextButtonClasses} onClick={this.next}><div className="icon-circle-right"></div></a>
       </div>
     )
   }
