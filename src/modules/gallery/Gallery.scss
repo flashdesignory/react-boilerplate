@@ -1,6 +1,7 @@
 @import '../../fonts';
 .gallery-inner{
-  position: relative;
+  //uncomment below to keep image background in content area
+  //position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;

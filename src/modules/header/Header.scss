@@ -2,6 +2,7 @@
 header{
   background-color: $lavender-light;
   padding: $contentPadding;
+  z-index: 1000;
   .header-center{
     display: flex;
     justify-content: center;
