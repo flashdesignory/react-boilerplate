@@ -6,6 +6,7 @@ import HomePage from './routes/HomePage';
 import AboutPage from './routes/AboutPage';
 import GalleryPage from './routes/GalleryPage';
 import VideoPage from './routes/VideoPage';
+import NotFound from './routes/NotFound';
 import Preloader from './modules/preloader/Preloader';
 
 import './Main.scss';
@@ -51,6 +52,7 @@ class Main extends Component {
   								<Route path="/about" render={() => this.state.loading ? <Preloader /> : <AboutPage {...this.state.data} />}/>
   								<Route path="/gallery" render={() => this.state.loading ? <Preloader /> : <GalleryPage {...this.state.data} />}/>
   								<Route path="/video" render={() => this.state.loading ? <Preloader /> : <VideoPage {...this.state.data} />}/>
+                  <Route component={NotFound}/>
   	            </Switch>
   	        </CSSTransition>
   	      </TransitionGroup>
