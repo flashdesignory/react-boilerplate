@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../loader/Loader';
 import Swipeable from '../utils/Swipeable';
 import './GalleryImage.scss';
 
@@ -15,7 +16,7 @@ class GalleryImage extends Component {
     return (
       <Swipeable handleLeftSwipe={this.props.handleLeftSwipe} handleRightSwipe={this.props.handleRightSwipe}>
         <div className={"image-container" + imageClass} onAnimationEnd={this.handleAnimationEnd}>
-          <div className="image-preloader"></div>
+          <Loader />
           <div className="image-element" style={{ backgroundImage: `url(${url})` }}></div>
         </div>
       </Swipeable>
