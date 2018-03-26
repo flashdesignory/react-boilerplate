@@ -1,5 +1,8 @@
 @import '/global';
 @import '/transitions';
+body{
+  font-family: 'Lato', sans-serif;
+}
 #root,
 .container{
   width:100%;

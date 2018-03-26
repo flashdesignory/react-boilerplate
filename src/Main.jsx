@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import axios from 'axios';
+import WebFont from 'webfontloader';
 import HomePage from './routes/HomePage';
 import AboutPage from './routes/AboutPage';
 import GalleryPage from './routes/GalleryPage';
@@ -19,8 +20,7 @@ class Main extends Component {
       data:undefined
     }
   }
-  componentDidMount(e){
-    console.log("componentDidMount()");
+  loadData(){
     let startTime = new Date();
     axios.get('files/data/data.json')
       .then(response => {
@@ -40,6 +40,19 @@ class Main extends Component {
       .catch(error => {
         console.log(error);
       });
+  }
+  loadFonts(){
+    WebFont.load({
+      google: {
+        families: ['Lato']
+      },
+      active: function() { console.log("font active")}
+    })
+  }
+  componentDidMount(e){
+    console.log("componentDidMount()");
+    this.loadData();
+    this.loadFonts();
   }
   render(){
     const { location } = this.props;
