@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss';
+import SocialNav from '../social/SocialNav';
 
 const Footer = (props) => {
   return (
@@ -12,7 +13,7 @@ const Footer = (props) => {
           <div className="copyright">{props.legal}</div>
         </div>
         <div className="footer-right">
-          <a id="footer-social" href="#">social</a>
+          <SocialNav/>
         </div>
       </div>
     </footer>
