@@ -2,3 +2,19 @@
 .video{
   background: url('files/images/background_video.jpg');
 }
+
+.video-page-trailer-button{
+  color: $snow;
+  background-color: $dusty;
+  cursor: pointer;
+  text-align: center;
+  width:200px;
+  height:30px;
+  line-height: 30px;
+  left:0px;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  margin:auto;
+  position: absolute;
+}
