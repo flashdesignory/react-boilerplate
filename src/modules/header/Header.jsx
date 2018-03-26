@@ -6,7 +6,7 @@ import './Header.scss';
 const Header = (props) => {
   return (
     <header>
-      <div className="header-center">
+      <div className="header-inner">
         <div className="title"><Link to="/"><h1>{props.title}</h1></Link></div>
         <nav>
           <ul>

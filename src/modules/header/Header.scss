@@ -3,7 +3,7 @@ header{
   background-color: $lavender-light;
   padding: $contentPadding;
   z-index: 1000;
-  .header-center{
+  .header-inner{
     display: flex;
     justify-content: center;
     flex-direction: row;

@@ -32,7 +32,7 @@
       {
         "id": "youtube",
         "link": "https://www.youtube.com/",
-        "enabled": true
+        "enabled": false
       }
     ]
   },
