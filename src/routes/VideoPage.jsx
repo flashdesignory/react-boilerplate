@@ -46,7 +46,9 @@ class VideoPage extends Component {
 				<Footer {...this.props.footer}/>
 				{
 					this.state.overlayVisible && (
-						<Youtube onClose={this.handleOnClose}/>
+						<Youtube
+							videoId={this.props.trailer.id}
+							onClose={this.handleOnClose}/>
 					)
 				}
 			</div>
