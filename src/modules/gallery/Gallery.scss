@@ -29,9 +29,9 @@
   &.right{
     align-self: flex-end;
   }
-  :hover{
+  /*:hover{
     color:#990000;
-  }
+  }*/
   &.inactive{
     cursor:default;
     opacity: 0.5;
@@ -40,4 +40,12 @@
     }
   }
 
+}
+
+.desktop{
+  .gallery-button{
+    div:hover{
+      color: #990000;
+    }
+  }
 }

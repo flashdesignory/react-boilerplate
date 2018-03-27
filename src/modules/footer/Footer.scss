@@ -3,7 +3,7 @@ footer{
   width: 100%;
   height: $footerHeight;
   flex-shrink: 0;
-  color: $lavender;
+  color: snow;
   background-color: $overcast-light;
   padding: $contentPadding;
   z-index: 1000;
@@ -29,6 +29,9 @@ footer{
       display:flex;
       justify-content: center;
       align-items: center;
+      .copyright{
+        font-size: 0.6em;
+      }
     }
     .footer-right{
       flex:1;

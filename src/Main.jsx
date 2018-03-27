@@ -35,6 +35,8 @@ class Main extends Component {
             loading: false,
             data: response.data
           })
+          document.body.classList.remove('loading');
+          document.body.classList.add('loaded');
         }, delay);
       })
       .catch(error => {
