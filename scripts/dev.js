@@ -14,14 +14,12 @@ function getExternalIp(){
 	let ifaces = require('os').networkInterfaces();
 	let addresses = [];
 	for (let dev in ifaces) {
-	   // ifaces[dev].filter((details) => details.family === 'IPv4' && details.internal === false ? address = details.address: undefined);
 		 ifaces[dev].filter(function(details){
 			 if(details.family === 'IPv4' && details.internal === false && details.address != undefined){
 				 addresses.push(details.address);
 			 }
 		 })
 	}
-	//console.log("found the following external ip: " + addresses);
 	return addresses[0];
 }
 
