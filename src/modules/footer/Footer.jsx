@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './Footer.scss';
 import SocialNav from '../social/SocialNav';
 
@@ -45,6 +47,10 @@ class Footer extends Component{
       </div>
     )
   }
+}
+
+Footer.proptTypes = {
+  legal: PropTypes.string
 }
 
 export default Footer;

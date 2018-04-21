@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './Header.scss';
 
@@ -19,6 +20,10 @@ const Header = (props) => {
     </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  title: PropTypes.string
 }
 
 export default Header;
