@@ -22,14 +22,13 @@ class Main extends Component {
   }
   loadData(){
     let startTime = new Date();
+    let minDuration = 3000;
     axios.get('files/data/data.json')
       .then(response => {
-        console.log(response.data);
+      //  console.log(response.data);
         let duration = new Date() - startTime;
-        let min = 3000;
         let delay;
-        min > duration ? delay = (min-duration) : delay = 0;
-        //console.log("delay: " + delay);
+        minDuration > duration ? delay = (minDuration-duration) : delay = 0;
         setTimeout(() => {
           this.setState({
             loading: false,

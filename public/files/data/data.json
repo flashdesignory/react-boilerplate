@@ -53,6 +53,9 @@
                {"id": "004", "url": "files/images/photos_04.jpg"},
                {"id": "005", "url": "files/images/photos_05.jpg"}]
   },
+  "about":{
+    "synopsis":" Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed aliquam mi. Quisque condimentum ante id ligula auctor, molestie pulvinar tellus semper. Proin in sapien egestas tortor dignissim elementum ac tristique nulla. Etiam vel cursus metus, at efficitur orci. Quisque non nibh vulputate, scelerisque nibh id, luctus arcu. Etiam lacinia sit amet metus euismod imperdiet. Sed in tortor libero. Duis velit elit, volutpat quis bibendum nec, lobortis eget metus. Duis felis augue, mollis in nisl aliquam, auctor tempus quam. Mauris sit amet enim in diam lacinia eleifend et non enim. Etiam finibus vitae metus in tincidunt. Aenean dignissim convallis tellus sed ultricies. Integer ligula lorem, vestibulum in posuere pellentesque, ornare sed enim. Ut auctor, libero sodales tempus pharetra, elit velit luctus libero, id malesuada nunc lacus sed arcu. Mauris quam nulla, gravida vel feugiat nec, euismod volutpat turpis. Morbi at nisl massa. Fusce sollicitudin faucibus ultricies. In sit amet ullamcorper mi. Cras ligula lectus, sollicitudin et tristique nec, sodales non mi. In lobortis consectetur augue, sed maximus ante dapibus id. Quisque nec odio accumsan, maximus velit nec, elementum justo. Fusce sed sagittis dolor. Donec erat ante, mattis ac arcu ac, venenatis ultrices dui. Vivamus finibus leo vel quam iaculis scelerisque. Fusce in quam efficitur, tristique ligula nec, egestas lacus. Nam vel justo semper, vehicula diam nec, gravida lorem. Fusce sapien ligula, tristique eget consectetur non, egestas sit amet augue. Suspendisse ut turpis rutrum, venenatis felis id, consectetur purus. Fusce blandit aliquet nunc, nec consequat arcu maximus non."
+  },
   "credits": {
     "links": [
       {
