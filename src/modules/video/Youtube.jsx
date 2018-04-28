@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Youtube.scss';
 
 class Youtube extends Component{
@@ -93,6 +94,16 @@ class Youtube extends Component{
       </div>
     )
   }
+}
+
+Youtube.defaultProps = {
+  videoId: "",
+  onClose: () => {}
+}
+
+Youtube.propTypes = {
+  videoId: PropTypes.string,
+  onClose: PropTypes.func
 }
 
 export default Youtube;

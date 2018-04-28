@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Swipeable extends Component {
   constructor(props){
@@ -68,4 +69,15 @@ class Swipeable extends Component {
     )
   }
 }
+
+Swipeable.defaultProps = {
+  handleRightSwipe: () => {},
+  handleLeftSwipe: () => {}
+}
+
+Swipeable.propTypes = {
+  handleRightSwipe: PropTypes.func,
+  handleLeftSwipe: PropTypes.func
+}
+
 export default Swipeable;

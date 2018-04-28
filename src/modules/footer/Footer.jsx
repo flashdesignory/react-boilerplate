@@ -49,6 +49,10 @@ class Footer extends Component{
   }
 }
 
+Footer.defaultProps = {
+  legal: "All Rights Reserved"
+}
+
 Footer.proptTypes = {
   legal: PropTypes.string
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Loader from '../loader/Loader';
 import Swipeable from '../utils/Swipeable';
 import './GalleryImage.scss';
@@ -22,6 +23,18 @@ class GalleryImage extends Component {
       </Swipeable>
     )
   }
+}
+
+GalleryImage.defaultProps = {
+  handleLeftSwipe: () => {},
+  handleRightSwipe: () => {},
+  handleAnimationEnd: () => {}
+}
+
+GalleryImage.propTypes = {
+  handleLeftSwipe: PropTypes.func,
+  handleRightSwipe: PropTypes.func,
+  handleAnimationEnd: PropTypes.func
 }
 
 export default GalleryImage;

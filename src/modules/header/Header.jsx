@@ -22,6 +22,10 @@ const Header = (props) => {
   )
 }
 
+Header.defaultProps = {
+  title:"title"
+}
+
 Header.propTypes = {
   title: PropTypes.string
 }

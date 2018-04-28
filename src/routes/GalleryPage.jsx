@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './GalleryPage.scss';
 
 import Header from '../modules/header/Header';
@@ -21,6 +22,18 @@ class GalleryPage extends Component {
 			</div>
 		)
 	}
+}
+
+GalleryPage.defaultProps = {
+  gallery: {},
+  header: {},
+  footer: {}
+}
+
+GalleryPage.propTypes = {
+  gallery: PropTypes.object,
+  header: PropTypes.object,
+  footer: PropTypes.object
 }
 
 export default GalleryPage;

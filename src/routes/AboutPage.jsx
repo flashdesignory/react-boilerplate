@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './AboutPage.scss';
 
 import Header from '../modules/header/Header';
@@ -22,6 +23,18 @@ class AboutPage extends Component{
       </div>
     )
   }
+}
+
+AboutPage.defaultProps = {
+  about: {},
+  header: {},
+  footer: {}
+}
+
+AboutPage.propTypes = {
+  about: PropTypes.object,
+  header: PropTypes.object,
+  footer: PropTypes.object
 }
 
 export default AboutPage;

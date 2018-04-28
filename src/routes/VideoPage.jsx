@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './VideoPage.scss';
 
 import Header from '../modules/header/Header';
@@ -54,6 +55,28 @@ class VideoPage extends Component {
 			</div>
 		)
 	}
+}
+
+VideoPage.defaultProps = {
+  landing: {
+		trailer: ""
+	},
+	trailer: {
+		id: ""
+	},
+  header: {},
+  footer: {}
+}
+
+VideoPage.propTypes = {
+	landing: PropTypes.shape({
+		trailer: PropTypes.string
+	}),
+	trailer: PropTypes.shape({
+		id: PropTypes.string
+	}),
+  header: PropTypes.object,
+  footer: PropTypes.object
 }
 
 export default VideoPage;

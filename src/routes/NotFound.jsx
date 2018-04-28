@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './NotFound.scss';
 import Header from '../modules/header/Header';
 import Footer from '../modules/footer/Footer';
@@ -20,6 +21,16 @@ class NotFound extends Component{
 			</div>
     )
   }
+}
+
+NotFound.defaultProps = {
+  header: {},
+  footer: {}
+}
+
+NotFound.propTypes = {
+  header: PropTypes.object,
+  footer: PropTypes.object
 }
 
 export default NotFound;

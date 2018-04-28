@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import GalleryImage from './GalleryImage';
 import './Gallery.scss';
 
@@ -52,7 +53,6 @@ class Gallery extends Component {
   }
   move(index){
     let { isTransitioning, currentIndex, prevIndex } = this.state;
-    //console.log("move(" + index + ", " + currentIndex + ", " + prevIndex + "," + isTransitioning + ")");
 
     if(isTransitioning) return;
     isTransitioning = true;
@@ -105,6 +105,16 @@ class Gallery extends Component {
       </div>
     )
   }
+}
+
+Gallery.defaultProps = {
+  images: [],
+  loop: false
+}
+
+Gallery.propTypes = {
+  images: PropTypes.array,
+  loop: PropTypes.bool
 }
 
 export default Gallery;
