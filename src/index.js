@@ -4,13 +4,13 @@ import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import Main from './Main';
 import 'sanitize.css';
 import './index.scss';
-import { isMobile } from './utils/utils';
+import initResize from './utils/resize';
+import initMobile from './utils/mobile';
+import initHover from './utils/hover';
 
-if(isMobile()){
-	document.body.classList.add('mobile');
-}else{
-	document.body.classList.add('desktop');
-}
+initResize();
+initMobile();
+initHover();
 
 ReactDOM.render((
 		/* <BrowserRouter>
