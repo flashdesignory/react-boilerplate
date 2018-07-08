@@ -23,8 +23,9 @@ footer{
   z-index: 1000;
   position: relative;
   align-self:flex-end;
-  a{
+  a, button{
     color:$snow;
+    border:none;
   }
   .footer-inner{
     width:100%;
@@ -79,5 +80,6 @@ footer{
     right: $contentPadding;
     top: $contentPadding;
     cursor: pointer;
+    border:none;
   }
 }

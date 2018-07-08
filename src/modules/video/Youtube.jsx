@@ -2,108 +2,128 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Youtube.scss';
 
-class Youtube extends Component{
-  constructor(props){
+class Youtube extends Component {
+  constructor(props) {
     super(props);
 
     this.videoId = props.videoId;
 
-    this.state={
-      visible:false
-    }
+    /* this.state = {
+      visible: false,
+    }; */
 
     this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
     this.onPlayerError = this.onPlayerError.bind(this);
     this.onPlayerReady = this.onPlayerReady.bind(this);
   }
+
+  componentDidMount() {
+    if (!window.YT) this.init();
+    else this.addPlayer();
+
+    /* this.setState({
+      visible: true,
+    }); */
+  }
+
+  componentWillUnmount() {
+    /* this.setState({
+      visible: false,
+    }); */
+  }
+
   onPlayerStateChange(event) {
-    console.log(event)
+    console.log(event);
     switch (event.data) {
-      case window['YT'].PlayerState.PLAYING:
-        if (this.cleanTime() == 0) {
-          console.log('started ' + this.player.getCurrentTime());
+      case window.YT.PlayerState.PLAYING:
+        if (this.cleanTime() === 0) {
+          console.log(`started ${this.player.getCurrentTime()}`);
         } else {
-          console.log('playing ' +this.player.getCurrentTime())
-        };
+          console.log(`playing ${this.player.getCurrentTime()}`);
+        }
         break;
-      case window['YT'].PlayerState.PAUSED:
-        if (this.player.getDuration() - this.player.getCurrentTime() != 0) {
-          console.log('paused' + ' @ ' +this.player.getCurrentTime());
-        };
+      case window.YT.PlayerState.PAUSED:
+        if (this.player.getDuration() - this.player.getCurrentTime() !== 0) {
+          console.log(`${'paused @ '}${this.player.getCurrentTime()}`);
+        }
         break;
-      case window['YT'].PlayerState.ENDED:
+      case window.YT.PlayerState.ENDED:
         console.log('ended ');
         break;
-    };
-  };
+      default:
+    }
+  }
+
   onPlayerError(event) {
+    this.funcName = 'onPlayerError'; // hack... doesn't feel right...
     switch (event.data) {
       case 2:
-      break;
+        break;
       case 100:
-      break;
+        break;
       case 101 || 150:
-      break;
-    };
-  };
-  onPlayerReady(event){
-    console.log("onPlayerReady()");
+        break;
+      default:
+    }
   }
+
+  onPlayerReady() {
+    this.funcName = 'onPlayerReady'; // hack... doesn't feel right...
+    console.log('onPlayerReady()');
+  }
+
   init() {
-    console.log("init()");
-    let tag = document.createElement('script');
+    console.log('init()');
+    const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
-    let firstScriptTag = document.getElementsByTagName('script')[0];
+    const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    window['onYouTubeIframeAPIReady'] = (e) => {
+    window.onYouTubeIframeAPIReady = () => {
       this.addPlayer();
     };
   }
-  addPlayer(){
-    this.player = new window['YT'].Player('player', {
+
+  addPlayer() {
+    this.player = new window.YT.Player('player', {
       videoId: this.videoId,
       events: {
-        'onStateChange': this.onPlayerStateChange,
-        'onError': this.onPlayerError,
-        'onReady': this.onPlayerReady
-      }
+        onStateChange: this.onPlayerStateChange,
+        onError: this.onPlayerError,
+        onReady: this.onPlayerReady,
+      },
     });
   }
-  componentDidMount(){
-    if(!window['YT']) this.init();
-    else this.addPlayer();
 
-    this.setState({
-      visible:true
-    })
-  }
-  componentWillUnmount(){
-    this.setState({
-      visible: false
-    })
-  }
-  render(){
+  render() {
     const { onClose } = this.props;
     return (
-      <div className={"video-container"}>
+      <div className="video-container">
         <div className="youtube-container">
-          <div className="youtube-player" ref="youtubePlayer" id="player"></div>
+          <div className="youtube-player" ref={this.playerRef} id="player" />
         </div>
-        <a className="video-container-close" onClick={onClose}><span className="icon-close"></span></a>
+        <button
+          className="video-container-close"
+          type="button"
+          tabIndex={0}
+          onClick={onClose}
+          onKeyUp={onClose}
+        >
+          <span className="icon-close" />
+        </button>
       </div>
-    )
+    );
   }
 }
 
 Youtube.defaultProps = {
-  videoId: "",
-  onClose: () => {}
-}
+  videoId: '',
+  onClose: () => {},
+};
 
 Youtube.propTypes = {
   videoId: PropTypes.string,
-  onClose: PropTypes.func
-}
+  onClose: PropTypes.func,
+};
 
 export default Youtube;
